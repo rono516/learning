@@ -89,6 +89,10 @@ class HomeController extends Controller
     {
         $module = Module::find($id);
         $course = Course::where('id', '=', $module->course_id)->first();
+        $module_id = $module->id;
+        $user_id = auth()->user()->id;
+        $all_done_modules = DB::table('progress_student')->where('user_id', '=', $user_id)->pluck('module_id');
+        dd($all_done_modules);
         if (Auth::check()) {
             $module->students()->attach(Auth::id());
         }

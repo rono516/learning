@@ -1,7 +1,4 @@
-@extends('layouts.app')
-
-@section('maincontent')
-    <h1 class="text-3xl text-gray-500 p-4 font-bold">
+<h1 class="text-3xl text-gray-500 p-4 font-bold">
         Checkout our new courses
     </h1>
 
@@ -114,4 +111,3 @@
             View all my courses
         </button>
     </div>
-@endsection
